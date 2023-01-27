@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="navbar-nav mx-auto">
+            <div class="search">
+              <a href="#">
+              <img width="75" src="data:image/png;base64,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" alt="Flipkart" title="Flipkart" class="_2xm1JU"></a>        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+        <div class="bar">
+            <input class="_3704LK" type="text" title="Search for products, brands and more" name="q" autocomplete="off" placeholder="Search for products, brands and more" value="">
+            <div class="btn-group">
+              <div class="button1">
+<button class="login">
+  <a href="#"> Log in </a>
+</button>
+</div>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">log in</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Separated link</a></li>
+                </ul>
+              </div>
+        </div>
+            </div>
+            </div>
+            <div class="other">
+            
+              <a class="navbar-brand" href="#"><b>Home</b> &nbsp;&nbsp;&nbsp;<span class="sr-only">(current)</span></a>
+            
+            <li class="nav-item">
+              <a class="navbar-brand" href="#"><b> Become a seller</b> &nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           <b>more</b>
+              </a>
+        
+            
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+
+              <div class="cart">  
+            <li class="nav-item">
+                <a class="navbar-brand" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                  </svg><b>cart</b></a>
+              </li>
+                </div>
+              </div>
+                
+              </div>
+              
+            </div>
+            </li>
+           
+          </ul>
+          
+          
+        </div>
+      </nav>
+  <head>
+    <style>
+      .login{
+        border-color: white;
+        padding-bottom: 5px;
+        padding-left:30px;
+        padding-right: 30px;
+        padding-top: 5px;
+      }
+  
+        .search{
+              margin-right: 8cm;
+
+              display: flex;
+        }
+        ._3704LK{
+            padding-right: 200px;
+        }
+        .other{
+            display: flex;
+            padding-right: 3cm;
+        }
+        .cart{
+            padding-left:2cm;
+        }
+        ._396cs4{
+            padding-left:25px;
+        }
+        .xtXmba{
+            padding-left:1cm;
+        }
+.mobile{
+    padding-left: 3cm;
+}
+.fashion{
+    padding-left: 3cm;
+}
+.Electronics{
+    padding-left: 2cm;
+}
+.home{
+    padding-left: 2.5cm;
+}
+.app{
+    padding-left: 2.5cm;
+}
+.travel{
+    padding-left: 2.5cm;
+}
+.top {
+    padding-left: 2.5cm;
+}
+.beauti{
+    padding-left: 1.5cm;
+}
+.bikes{
+    padding-left: 2cm;
+}
+.d-block {
+    width: 1000px 500px;
+
+}
+.slide{
+    padding-top: .5cm;
+}
+.ele{
+    padding-left: 2cm;
+    padding-top: 3cm;
+}
+.card{
+    padding-top: 1cm;
+    
+  
+}
+.buy{
+  text-align: center;
+}
+.same{
+  width: 50px;
+  padding-left: 30px;
+}
+.arrow{
+  padding-left:2cm;
+  padding-top: 2cm;
+  background-color:gray;
+}
+.cau{
+  display: flex;
+  padding-left: 70%;
+  padding-bottom: 7cm;
+}
+.noro{
+  padding-left: 3cm;
+}
+.spyder{
+  display: flex;
+  padding-left: 2.3cm;
+}
+.moho{
+  padding-left: 2cm;
+}
+.like{
+  width: 200px;
+  height:100px;
+  padding-left: 50px;
+}
+.lost{
+  width:200px;
+  padding-left: 2cm;
+}
+.card-body{
+  padding-top: 2cm;
+}
+.dont{
+  padding-right: 5cm;
+}
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>FLIPKART</title>
+  </head>
+  <body>
+    <div class="row">
+        <img loading="lazy" class="_396cs4" alt="Grocery" src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100"><br>
+        <img loading="lazy" class="_396cs4" alt="Mobiles" src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100">
+        <img loading="lazy" class="_396cs4" alt="Fashion" src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100">
+        <img loading="lazy" class="_396cs4" alt="Electronics" src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100">
+        <img loading="lazy" class="_396cs4" alt="Home" src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100">
+        <img loading="lazy" class="_396cs4" alt="Appliances" src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100">
+        <img loading="lazy" class="_396cs4" alt="Travel" src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100">
+        <img loading="lazy" class="_396cs4" alt="Top Offers" src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
+        <img loading="lazy" class="_396cs4" alt="Beauty, Toys &amp; More" src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100">
+        <img loading="lazy" class="_396cs4" alt="Two Wheelers" src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100">
+
+    </div>
+    <div class="row">
+        <a href="#">
+       <div class="xtXmba">Grocery</div>
+        </a>
+        <a href="#">
+            <div class="mobile">Mobiles</div>
+        </a>
+        <a href="#">
+            <div class="fashion">Fashion<svg width="5" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="_2sVfI7"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_1zrN4q"></path></svg></div>
+        </a>
+        <a href="#">
+            <div class="Electronics">Electronics<svg width="5" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="_2sVfI7"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_1zrN4q"></path></svg></div>
+        </a>
+        <a href="#">
+            <div class="home">Home<svg width="5" height="8" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="_2sVfI7"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#fff" class="_1zrN4q"></path></svg></div>
+
+        </a>
+        <a href="#">
+            <div class="app">Appliances</div>
+
+        </a>
+    </a>
+    <a href="#">
+        <div class="travel">travel</div>
+        </a>
+        <a href="#">
+            <div class="top ">top offer</div>
+            </a>
+            <a href="#">
+                <div class="beauti ">beauti toys and more</div>
+                </a>
+                <a href="#">
+                    <div class="bikes ">bikes</div>
+                    </a>
+    </div>
+    <div class="slide">
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://rukminim1.flixcart.com/fk-p-flap/844/140/image/7974b943d9a902ec.jpg?q=50" alt="Infinix">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://rukminim1.flixcart.com/fk-p-flap/844/140/image/7974b943d9a902ec.jpg?q=50" alt="A">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://rukminim1.flixcart.com/fk-p-flap/844/140/image/7974b943d9a902ec.jpg?q=50" alt="A">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="ele">
+      <h3>
+        Best of <br>
+        Electronics&nbsp;
+      </h3>
+    </div>
+      <div class="noro">
+      <div class ="card" style="width: 18rem;">
+        <div class="same">
+        <img src="https://rukminim1.flixcart.com/image/200/200/printer/j/j/y/hp-laserjet-m1005-multifunction-original-imadxhzpeb9qbrfg.jpeg?q=70" srcset="https://rukminim1.flixcart.com/image/400/400/printer/j/j/y/hp-laserjet-m1005-multifunction-original-imadxhzpeb9qbrfg.jpeg?q=70 2x, https://rukminim1.flixcart.com/image/200/200/printer/j/j/y/hp-laserjet-m1005-multifunction-original-imadxhzpeb9qbrfg.jpeg?q=70 1x">
+        </div>
+        <div class="card-body">
+
+        
+          <a href="#"><center><b>Printer</b></center></a>
+          <p class="card-text"><center>staring from<br>Rs 5000</center></p>
+          <p class="card-text"></p>
+          
+  
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="same">
+        <img src="https://rukminim1.flixcart.com/image/200/200/l5jxt3k0/dslr-camera/m/n/a/-original-imagg7hsggshhwbz.jpeg?q=70" srcset="https://rukminim1.flixcart.com/image/400/400/l5jxt3k0/dslr-camera/m/n/a/-original-imagg7hsggshhwbz.jpeg?q=70 2x, https://rukminim1.flixcart.com/image/200/200/l5jxt3k0/dslr-camera/m/n/a/-original-imagg7hsggshhwbz.jpeg?q=70 1x">
+        </div>
+        <div class="card-body">
+
+          <a href="#"><center><b>Camera</b></center></a>
+          <p class="card-text"><center>staring from<br>Rs 5000</center></p>
+          <p class="card-text"></p>
+        
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="same">
+        <img src="https://rukminim1.flixcart.com/image/200/200/kmp7ngw0/monitor/j/z/h/s2721hn-27-py0df-dell-original-imagfjphuywuh2a7.jpeg?q=70" srcset="https://rukminim1.flixcart.com/image/400/400/kmp7ngw0/monitor/j/z/h/s2721hn-27-py0df-dell-original-imagfjphuywuh2a7.jpeg?q=70 2x, https://rukminim1.flixcart.com/image/200/200/kmp7ngw0/monitor/j/z/h/s2721hn-27-py0df-dell-original-imagfjphuywuh2a7.jpeg?q=70 1x">
+        </div>
+        <div class="card-body">
+          <a href="#"><center><b>Monitors</b></center></a>
+          <p class="card-text"><center>staring from<br>Rs 5000</center></p>
+          <p class="card-text"></p>
+        
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="same">
+
+        <img src="https://rukminim1.flixcart.com/image/200/200/k186fm80/bat/9/f/n/1000-1200-short-handle-endorsed-for-light-hard-tennis-ball-with-original-imafkuuyxrrphkbr.jpeg?q=70" srcset="https://rukminim1.flixcart.com/image/400/400/k186fm80/bat/9/f/n/1000-1200-short-handle-endorsed-for-light-hard-tennis-ball-with-original-imafkuuyxrrphkbr.jpeg?q=70 2x, https://rukminim1.flixcart.com/image/200/200/k186fm80/bat/9/f/n/1000-1200-short-handle-endorsed-for-light-hard-tennis-ball-with-original-imafkuuyxrrphkbr.jpeg?q=70 1x">
+        </div>
+        <div class="card-body">
+          <a href="#"><center><b>Cricket bats</b></center></a>
+          <p class="card-text"><center>staring from<br>Rs 5000</center></p>
+          <p class="card-text"></p>
+      
+        </div>
+      </div>
+    </div>   
+    <div class="row">
+      <div class="moho">
+        <h3><b>
+          Beauty,Food<br>
+          Toys and More
+          </b>
+        </h3>
+      </div>
+      <div  class="spyder">
+
+        <div class="card" style="width: 18rem;">
+          <div class="like">
+          <img class="card-img-top" src="https://rukminim1.flixcart.com/image/200/200/jlph9jk0/cycle/h/f/k/skyper-26t-sskp26bk0001-16-hero-original-imaf8ru5xysfgtmx.jpeg?q=70" srcset="https://rukminim1.flixcart.com/image/400/400/jlph9jk0/cycle/h/f/k/skyper-26t-sskp26bk0001-16-hero-original-imaf8ru5xysfgtmx.jpeg?q=70 2x, https://rukminim1.flixcart.com/image/200/200/jlph9jk0/cycle/h/f/k/skyper-26t-sskp26bk0001-16-hero-original-imaf8ru5xysfgtmx.jpeg?q=70 1x">
+          </div>
+          <div class="card-body">
+        <a href="#"><center><b>Premium cycle</b></center></a>
+            <p class="card-text"><center>staring from<br>Rs 5000</center></p>
+      
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="lost">
+          <img class="card-img-top" src="https://rukminim1.flixcart.com/image/200/200/klzhq4w0/jam-spread/w/q/u/510-chocolate-peanut-butter-crunchy-510g-jar-nut-butter-original-imagyzpqqfaguxny.jpeg?q=70" srcset="https://rukminim1.flixcart.com/image/400/400/klzhq4w0/jam-spread/w/q/u/510-chocolate-peanut-butter-crunchy-510g-jar-nut-butter-original-imagyzpqqfaguxny.jpeg?q=70 2x, https://rukminim1.flixcart.com/image/200/200/klzhq4w0/jam-spread/w/q/u/510-chocolate-peanut-butter-crunchy-510g-jar-nut-butter-original-imagyzpqqfaguxny.jpeg?q=70 1x">
+          </div>
+          <div class="card-body">
+            <a href="#"><center><b>Food Supplyments</b></center></a>
+            <p class="card-text"><center>staring from<br>Rs 200</center></p>
+            
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="like">
+          <img class="card-img-top" src="https://rukminim1.flixcart.com/image/200/200/kebpqq80/musical-keyboard/j/h/h/37-keys-nj-fashion-original-imafvyhrjeuah2ge.jpeg?q=70" srcset="https://rukminim1.flixcart.com/image/400/400/kebpqq80/musical-keyboard/j/h/h/37-keys-nj-fashion-original-imafvyhrjeuah2ge.jpeg?q=70 2x, https://rukminim1.flixcart.com/image/200/200/kebpqq80/musical-keyboard/j/h/h/37-keys-nj-fashion-original-imafvyhrjeuah2ge.jpeg?q=70 1x">
+          </div>
+          <div class="card-body">
+            <a href="#"><center><b> Musical Keyboard</b></center></a>
+            <p class="card-text"><center> staring from<br>Rs 1990 </center></p>
+      
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <div class="lost">
+          <img class="card-img-top" src="https://rukminim1.flixcart.com/image/200/200/jk1grrk0/car-pressure-washer/j/c/m/06008a7af0-bosch-original-imaf7hd6bv8g3m6r.jpeg?q=70" srcset="https://rukminim1.flixcart.com/image/400/400/jk1grrk0/car-pressure-washer/j/c/m/06008a7af0-bosch-original-imaf7hd6bv8g3m6r.jpeg?q=70 2x, https://rukminim1.flixcart.com/image/200/200/jk1grrk0/car-pressure-washer/j/c/m/06008a7af0-bosch-original-imaf7hd6bv8g3m6r.jpeg?q=70 1x">
+          </div>
+          <div class="card-body">
+            <a href="#"><center><b>Vaccum Cleaners</b></center></a>
+            <p class="card-text"><center>staring from<br>Rs 1650</center></p>
+    
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <footer class="bg-dark text-center text-lg-light">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="dont">
+        
+            <h5 class="text-uppercase text-light">ABOUT</h5>
+    
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-light">contact us </a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">Carriers</a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">Flikart store</a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">Press</a>
+              </li>
+            </ul>
+        
+          </div>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="dont">
+            <h5 class="text-uppercase mb-0 text-light">HELP</h5>
+    
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-light">Payment </a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">Shipping</a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">Cancellation</a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">F A Q</a>
+              </li>
+            </ul>
+          </div>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="dont">
+            <h5 class="text-uppercase text-light">POLICY</h5>
+    
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-light">Return policy</a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">Termns and condition </a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">Security</a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">Privacy</a>
+              </li>
+            </ul>
+          </div>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="dont">
+            <h5 class="text-uppercase mb-0 text-light">SOCIAL</h5>
+    
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" class="text-light">Facebook</a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">You tube</a>
+              </li>
+              <li>
+                <a href="#!" class="text-light">Instagram</a>
+              </li>
+              <li>
+                <a href="#!" class="text-light"></a>
+              </li>
+            </ul>
+          </div>
+          </div>
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        
+            <h5 class="text-uppercase mb-0 text-light">Mail us :</h5>
+            <p style="color: aliceblue;">
+              Flipkart Internet Private Limited,<br>
+
+Buildings Alyssa, Begonia &<br>
+
+Clove Embassy Tech Village,<br>
+
+Outer Ring Road, Devarabeesanahalli Village,<br>
+
+Bengaluru, 560103,<br>
+
+
+Karnataka, India<br>
+            </p>
+        
+
+          </div>
+        </div>
+  
+        <!--Grid row-->
+      </div>
+  
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color:aliceblue";>
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
